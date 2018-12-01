@@ -49,6 +49,11 @@
 #define AP_SERIALMANAGER_FRSKY_BUFSIZE_RX       0
 #define AP_SERIALMANAGER_FRSKY_BUFSIZE_TX       0
 
+//LTM default baud rates and buffer sizes
+#define AP_SERIALMANAGER_LTM_BAUD        2400
+#define AP_SERIALMANAGER_LTM_BUFSIZE_RX        0
+#define AP_SERIALMANAGER_LTM_BUFSIZE_TX        32
+
 // GPS default baud rates and buffer sizes
 // we need a 256 byte buffer for some GPS types (eg. UBLOX)
 #define AP_SERIALMANAGER_GPS_BAUD               38400
@@ -102,6 +107,7 @@ public:
         SerialProtocol_ESCTelemetry = 16,
         SerialProtocol_Devo_Telem = 17,
         SerialProtocol_OpticalFlow = 18,
+		SerialProtocol_LTM = 19,
     };
 
     // get singleton instance
